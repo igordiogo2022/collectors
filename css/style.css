@@ -18,6 +18,37 @@ body{
     background-color: var(--cor1);
 }
 
+/* ===== HEADER ===== */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--cor1);
+    height: 9vh;
+}
+
+header img{
+    height: 95%;
+}
+
+header menu{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+header menu a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: white;
+    font-size: 15px;
+}
+
+header menu a:hover{
+    scale: 1.05;
+}
+
+/* ===== NOTÍCIAS ===== */
 .noticia{
     display: flex;
     align-items: center;
@@ -37,6 +68,7 @@ body{
     width: 40%;
 }
 
+/* ===== STAFF ===== */
 #staff{
     display: flex;
     flex-direction: column;
@@ -98,4 +130,63 @@ body{
 
 .moderador{
     background-image: linear-gradient(#E11111, #AA3B3B);
+}
+
+@media (max-width: 500px) {
+    header {
+        height: 6vh;
+    }
+
+    header menu{
+        font-size: 10px;
+        width: 60%;
+    }
+
+    header menu a{
+        font-size: 13px;
+    } 
+
+    .noticia{
+        height: 60vh;
+        padding: 0;
+        flex-direction: column;
+        justify-content: start;
+        gap: 10px;
+    }
+
+    .noticia img{
+        border-radius: 0;
+        border: 0;
+        width: 100%;
+        height: 30vh;
+    }
+
+    .noticia .conteudo{
+        font-size: 14px;
+        width: 90%;
+        line-height: 1.3;
+    }
+
+    .linha-staff{
+        gap: 15px;
+        margin-bottom: 6%;
+    }
+
+    .card-staff{
+        width: min(120px, 100%);
+    }
+
+    .card-staff img{
+        width: 90px;
+        border-radius: 12px;
+        margin-bottom: 5%;
+    }
+
+    .card-staff h2{
+        font-size: 18px;
+    }
+    
+    .card-staff p{
+        font-size: 15px;
+    }
 }
